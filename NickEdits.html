@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)https://www.nickedits.co.il/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/svg+xml" href="https://media.discordapp.net/attachments/929439591533019196/1159497703429001246/UGHUI.png?ex=65313d62&amp;is=651ec862&amp;hm=c24f29f913836a52874d3e8b8c17fc95f52e348ded1578adaccb25667a86a302&amp;=&amp;width=671&amp;height=671">
+    <meta name="generator" content="Astro v2.10.15">
+
+    <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
+    <title>NickEdits</title>
+
+
+
+<link rel="canonical" href="https://astroship.web3templates.com/">
+
+<meta name="description" content="אנחנו ניקאדיטס. ואנחנו נפיק בשבילך את התוכן לרשתות החברתיות ברמה הכי גבוהה שיש.">
+
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="NickEdits Official Website">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://media.discordapp.net/attachments/929439591533019196/1159497703429001246/UGHUI.png?ex=65313d62&amp;is=651ec862&amp;hm=c24f29f913836a52874d3e8b8c17fc95f52e348ded1578adaccb25667a86a302&amp;=&amp;width=671&amp;height=671">
+<meta property="og:url" content="https://astroship.web3templates.com/">
+
+
+
+
+
+
+  <link rel="stylesheet" href="./NickEdits_files/404.bbb0ad55.css">
+<link rel="stylesheet" href="./NickEdits_files/index.68cd2173.css"><script type="module" src="./NickEdits_files/hoisted.09374400.js"></script></head>
+  <body>
+    <div>
+  
+  <header class="flex lg:flex-row justify-between items-center my-5 max-w-screen-2xl mx-auto px-5">
+    
+      <div class="flex w-full lg:w-auto items-center justify-between">
+        <a href="https://www.nickedits.co.il/" class="text-lg flex gap-2">
+          <img src="./NickEdits_files/UGHUI.png" alt="" class="h-7">
+          <div>
+            <span class="font-bold text-slate-800">Nick</span><span class="text-slate-500">Edits</span>
+          </div>
+        </a>
+      </div>
+      <div class="block lg:hidden">
+        <button id="astronav-menu" aria-label="Toggle Menu">
+  
+    <svg fill="currentColor" class="w-4 h-4 text-gray-800" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <title>Toggle Menu</title>
+      <path class="astronav-close-icon astronav-toggle hidden" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 01-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 01-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 011.414-1.414l4.829 4.828 4.828-4.828a1 1 0 111.414 1.414l-4.828 4.829 4.828 4.828z"></path>
+      <path class="astronav-open-icon astronav-toggle" fill-rule="evenodd" d="M4 5h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2z"></path>
+    </svg>
+  
+</button>
+      </div>
+    
+
+<script>(function(){const closeOnClick = false;
+
+["DOMContentLoaded", "astro:after-swap"].forEach((event) => {
+  document.addEventListener(event, addListeners);
+});
+
+// Function to clone and replace elements
+function cloneAndReplace(element) {
+  const clone = element.cloneNode(true);
+  element.parentNode.replaceChild(clone, element);
+}
+
+function addListeners() {
+  // Clean up existing listeners
+  const oldMenuButton = document.getElementById("astronav-menu");
+  if (oldMenuButton) {
+    cloneAndReplace(oldMenuButton);
+  }
+
+  const oldDropdownMenus = document.querySelectorAll(".astronav-dropdown");
+  oldDropdownMenus.forEach((menu) => {
+    cloneAndReplace(menu);
+  });
+
+  // Mobile nav toggle
+  const menuButton = document.getElementById("astronav-menu");
+  menuButton && menuButton.addEventListener("click", toggleMobileNav);
+
+  // Dropdown menus
+  const dropdownMenus = document.querySelectorAll(".astronav-dropdown");
+  dropdownMenus.forEach((menu) => {
+    const button = menu.querySelector("button");
+    button &&
+      button.addEventListener("click", (event) =>
+        toggleDropdownMenu(event, menu, dropdownMenus)
+      );
+
+    // Handle Submenu Dropdowns
+    const dropDownSubmenus = menu.querySelectorAll(
+      ".astronav-dropdown-submenu"
+    );
+
+    dropDownSubmenus.forEach((submenu) => {
+      const submenuButton = submenu.querySelector("button");
+      submenuButton &&
+        submenuButton.addEventListener("click", (event) => {
+          event.stopImmediatePropagation();
+          toggleSubmenuDropdown(event, submenu);
+        });
+    });
+  });
+
+  // Clicking away from dropdown will remove the dropdown class
+  document.addEventListener("click", closeAllDropdowns);
+
+  if (closeOnClick) {
+    handleCloseOnClick();
+  }
+}
+
+function toggleMobileNav() {
+  [...document.querySelectorAll(".astronav-toggle")].forEach((el) => {
+    el.classList.toggle("hidden");
+  });
+}
+
+function toggleDropdownMenu(event, menu, dropdownMenus) {
+  toggleMenu(menu);
+
+  // Close one dropdown when selecting another
+  Array.from(dropdownMenus)
+    .filter((el) => el !== menu && !menu.contains(el))
+    .forEach(closeMenu);
+
+  event.stopPropagation();
+}
+
+function toggleSubmenuDropdown(event, submenu) {
+  event.stopPropagation();
+  toggleMenu(submenu);
+
+  // Close sibling submenus at the same nesting level
+  const siblingSubmenus = submenu
+    .closest(".astronav-dropdown")
+    .querySelectorAll(".astronav-dropdown-submenu");
+  Array.from(siblingSubmenus)
+    .filter((el) => el !== submenu && !submenu.contains(el))
+    .forEach(closeMenu);
+}
+
+function closeAllDropdowns(event) {
+  const dropdownMenus = document.querySelectorAll(".dropdown-toggle");
+  const dropdownParent = document.querySelectorAll(
+    ".astronav-dropdown, .astronav-dropdown-submenu"
+  );
+  const isButtonInsideDropdown = [
+    ...document.querySelectorAll(
+      ".astronav-dropdown button, .astronav-dropdown-submenu button, #astronav-menu"
+    ),
+  ].some((button) => button.contains(event.target));
+  if (!isButtonInsideDropdown) {
+    dropdownMenus.forEach((d) => {
+      // console.log("I ran", d);
+      // if (!d.contains(event.target)) {
+      d.classList.remove("open");
+      d.removeAttribute("open");
+      d.classList.add("hidden");
+      // }
+    });
+    dropdownParent.forEach((d) => {
+      d.classList.remove("open");
+      d.removeAttribute("open");
+      d.setAttribute("aria-expanded", "false");
+    });
+  }
+}
+
+function toggleMenu(menu) {
+  menu.classList.toggle("open");
+  const expanded = menu.getAttribute("aria-expanded") === "true";
+  menu.setAttribute("aria-expanded", expanded ? "false" : "true");
+  menu.hasAttribute("open")
+    ? menu.removeAttribute("open")
+    : menu.setAttribute("open", "");
+
+  const dropdownToggle = menu.querySelector(".dropdown-toggle");
+  const dropdownExpanded = dropdownToggle.getAttribute("aria-expanded");
+  dropdownToggle.classList.toggle("hidden");
+  dropdownToggle.setAttribute(
+    "aria-expanded",
+    dropdownExpanded === "true" ? "false" : "true"
+  );
+}
+
+function closeMenu(menu) {
+  // console.log("closing", menu);
+  menu.classList.remove("open");
+  menu.removeAttribute("open");
+  menu.setAttribute("aria-expanded", "false");
+  const dropdownToggles = menu.querySelectorAll(".dropdown-toggle");
+  dropdownToggles.forEach((toggle) => {
+    toggle.classList.add("hidden");
+    toggle.setAttribute("aria-expanded", "false");
+  });
+}
+
+function handleCloseOnClick() {
+  const navMenuItems = document.querySelector(".astronav-items");
+  const navToggle = document.getElementById("astronav-menu");
+  const navLink = navMenuItems && navMenuItems.querySelectorAll("a");
+
+  const MenuIcons = navToggle.querySelectorAll(".astronav-toggle");
+
+  navLink &&
+    navLink.forEach((item) => {
+      item.addEventListener("click", () => {
+        navMenuItems?.classList.add("hidden");
+        MenuIcons.forEach((el) => {
+          el.classList.toggle("hidden");
+        });
+      });
+    });
+}
+})();</script>
+    <nav class="astronav-items astronav-toggle hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
+    
+      <ul class="flex flex-col lg:flex-row lg:gap-3">
+        <li>
+                  <a href="https://www.nickedits.co.il/#mywork" class="flex lg:px-3 py-2 items-center gap-2 text-gray-600 hover:text-gray-900">
+                    <span> תיק עבודות</span>
+                    
+                  </a>
+                </li><li>
+                  <a href="https://www.nickedits.co.il/#faq" class="flex lg:px-3 py-2 items-center gap-2 text-gray-600 hover:text-gray-900">
+                    <span> שאלות נפוצות</span>
+                    
+                  </a>
+                </li><li>
+                  <a href="https://www.instagram.com/nikita.shmuelov/" class="flex lg:px-3 py-2 items-center gap-2 text-gray-600 hover:text-gray-900">
+                    <span> צרו קשר</span>
+                    <span class="ml-1 px-2 py-0.5 text-[10px] animate-pulse font-semibold uppercase text-white bg-pink-600 rounded-full">
+                        <svg viewBox="0 0 24 24" class="h-4" astro-icon="mdi:instagram"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path></svg>
+                      </span>
+                  </a>
+                </li>
+      </ul>
+    
+</nav>
+  </header>
+
+</div>
+    
+  <div>
+  
+    <main dir="rtl" class="flex items-center justify-center mx-8 pt-16 pb-8 md:py-36">
+  <div class="flex flex-col justify-center items-center">
+    <h1 class="text-5xl lg:text-6xl text-gray-900 text-center xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+      קדם את <span id="title" class=""><span class="text-purple-500 marked-pink pb-4">הטיקטוק</span></span> שלך
+    </h1>
+    <div id="subtitle" class="text-[21px] text-center mt-4 text-slate-600 max-w-xl">
+      שלום! תודה שביקרתם באתר שלנו! אנחנו <strong>ניקאדיטס</strong>. אנחנו נפיק
+      בשבילך את התוכן לרשתות החברתיות ברמה הכי גבוהה שיש. אנחנו מתמחים בעריכת
+      סרטוני וידאו מכל הסוגים.
+    </div>
+    <div class="mt-6 items-center justify-center flex flex-row gap-4">
+      <a href="https://www.instagram.com/nikita.shmuelov/" target="_blank" dir="ltr" rel="noopener" class="rounded text-center shadow-lg transition focus-visible:ring-2 ring-offset-2 ring-gray-200 px-5 py-2.5 bg-pink-500 hover:bg-pink-600 text-white flex gap-1 py-[17px] px-[49px] rounded-lg text-lg font-semibold items-center justify-center">
+        <svg viewBox="0 0 24 24" class="text-white w-6 h-6" astro-icon="bx:bxl-instagram"><path fill="currentColor" d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"></path><circle cx="16.806" cy="7.207" r="1.078" fill="currentColor"></circle><path fill="currentColor" d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"></path></svg>
+        צרו קשר
+      
+</a>
+      <a href="https://www.nickedits.co.il/#mywork" dir="ltr" rel="noopener" class="rounded text-center shadow-lg transition focus-visible:ring-2 ring-offset-2 ring-gray-200 px-5 py-2.5 bg-white border-[1px] border-slate-800 hover:bg-gray-100 text-black flex gap-1 py-4 px-12 rounded-lg text-lg font-semibold items-center justify-center">
+        תיק העבודות
+      
+</a>
+    </div>
+  </div>
+  <script src="./NickEdits_files/typed.umd.js"></script>
+
+  <script>
+  var typed = new Typed("#title", {
+    strings: [
+      '<span class="text-purple-500 marked-pink pb-4">הטיקטוק</span>',
+      '<span class="text-pink-500 marked-purple pb-4">האינסטגרם</span>',
+      '<span class="text-red-500 marked pb-4">היוטיוב</span>',
+    ],
+    typeSpeed: 100,
+    loop: true,
+    fadeOut: true,
+    startDelay: 1000,
+    backDelay: 5000,
+    showCursor: false,
+  });
+  </script>
+</main>
+
+<style>
+  .marked {
+    background-image: linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 0.8em,
+      #fbdada 0.8001em,
+      #fbdada 1.2em,
+      transparent 1.2001em,
+      transparent
+    );
+  }
+
+  .marked-purple {
+    background-image: linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 0.8em,
+      #ffd4f8 0.8001em,
+      #ffc1f5 1.2em,
+      transparent 1.2001em,
+      transparent
+    );
+  }
+
+  .marked-pink {
+    background-image: linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 0.8em,
+      #ebb9ff 0.8001em,
+      #edbfff 1.2em,
+      transparent 1.2001em,
+      transparent
+    );
+  }
+</style>
+    <div class="bg-[#F6F9FC] w-full">
+      <article id="mywork" class="mt-36 py-16 pb-22 max-w-screen-2xl mx-auto px-5">
+  <div class="flex flex-col justify-center mb-10" dir="rtl">
+    <h2 class="text-5xl lg:text-[65px] font-semibold text-right">
+      העבודות שלי
+    </h2>
+    <h3 class="text-xl lg:text-2xl text-right">
+      סרטונים שערכתי ליוצרי התוכן המצליחים בארץ.
+    </h3>
+  </div>
+  <div class="lg:grid-cols-3 grid-cols-1 grid-rows-1 gap-12 md:grid-rows-2 md:grid-cols-2 lg:grid-rows-2 grid">
+    <lite-youtube videoid="Kk3ZLd88KBs" class="rounded-xl shadow-xl" style="background-image: url(&#39;https://i.ytimg.com/vi/Kk3ZLd88KBs/hqdefault.jpg&#39;);"><button type="button" class="lty-playbtn"><span class="lyt-visually-hidden">Play</span></button></lite-youtube>
+    <lite-youtube videoid="1WyAkN4Z9iU" class="rounded-xl shadow-xl" style="background-image: url(&#39;https://i.ytimg.com/vi/1WyAkN4Z9iU/hqdefault.jpg&#39;);"><button type="button" class="lty-playbtn"><span class="lyt-visually-hidden">Play</span></button></lite-youtube>
+    <lite-youtube videoid="g1DtBQrx0Xw" class="rounded-xl shadow-xl" style="background-image: url(&#39;https://i.ytimg.com/vi/g1DtBQrx0Xw/hqdefault.jpg&#39;);"><button type="button" class="lty-playbtn"><span class="lyt-visually-hidden">Play</span></button></lite-youtube>
+    <lite-youtube videoid="TYxY-TZnhME" class="rounded-xl shadow-xl" style="background-image: url(&#39;https://i.ytimg.com/vi/TYxY-TZnhME/hqdefault.jpg&#39;);"><button type="button" class="lty-playbtn"><span class="lyt-visually-hidden">Play</span></button></lite-youtube>
+    <lite-youtube videoid="zY8rAFWPl6w" class="rounded-xl shadow-xl" style="background-image: url(&#39;https://i.ytimg.com/vi/zY8rAFWPl6w/hqdefault.jpg&#39;);"><button type="button" class="lty-playbtn"><span class="lyt-visually-hidden">Play</span></button></lite-youtube>
+    <lite-youtube videoid="TYxY-TZnhME" class="rounded-xl shadow-xl" style="background-image: url(&#39;https://i.ytimg.com/vi/TYxY-TZnhME/hqdefault.jpg&#39;);"><button type="button" class="lty-playbtn"><span class="lyt-visually-hidden">Play</span></button></lite-youtube>
+  </div>
+</article>
+    </div>
+    <article id="faq" class="mt-36 max-w-screen-2xl mx-auto px-5">
+  <div class="flex flex-col justify-center mb-10" dir="rtl">
+    <h2 class="text-5xl lg:text-[65px] font-semibold text-right">
+      שאלות ותשובות
+    </h2>
+    <h3 class="text-xl lg:text-2xl text-right">
+      יש לכם שאלה? סיכוי גדול שהתשובה תיהיה כאן!
+    </h3>
+  </div>
+  <div dir="rtl">
+    <div class="space-y-4">
+      <details class="group border-s-4 border-green-500 bg-gray-50 p-6 [&amp;_summary::-webkit-details-marker]:hidden" open="">
+        <summary class="flex cursor-pointer items-center justify-between gap-1.5">
+          <h2 class="text-2xl font-semibold text-gray-900">
+            איך אפשר ליצור איתנו קשר?
+          </h2>
+
+          <span class="shrink-0 rounded-full bg-white p-1.5 text-gray-900 sm:p-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-45" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd"></path>
+            </svg>
+          </span>
+        </summary>
+
+        <p class="mt-4 leading-relaxed text-gray-700 text-xl">
+          תוכלו ליצור איתנו קשר באינסטגרם או בדיסקורד! שם בדיסקורד nickmlyt, שם
+          באינסטגרם: nikita.shmuelov.
+        </p>
+      </details>
+
+      <details class="group border-s-4 border-green-500 bg-gray-50 p-6 [&amp;_summary::-webkit-details-marker]:hidden">
+        <summary class="flex cursor-pointer items-center justify-between gap-1.5">
+          <h2 class="text-2xl font-semibold text-gray-900">
+            למה כדאי דווקא לקנות מכם?
+          </h2>
+
+          <span class="shrink-0 rounded-full bg-white p-1.5 text-gray-900 sm:p-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-45" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd"></path>
+            </svg>
+          </span>
+        </summary>
+
+        <p class="mt-4 leading-relaxed text-gray-700 text-xl">
+          אנחנו נפיק לכם את התוכן ברמה הכי גבוהה שיש ובמחיר סמלי שהלקוח והמוכר
+          יהיה מרוצה!
+        </p>
+      </details>
+
+      <details class="group border-s-4 border-green-500 bg-gray-50 p-6 [&amp;_summary::-webkit-details-marker]:hidden">
+        <summary class="flex cursor-pointer items-center justify-between gap-1.5">
+          <h2 class="text-2xl font-semibold text-gray-900">
+            ברגע שאקבל את הזמנתי, האם אוכל לשנות כמה דברים שהנני רוצה?
+          </h2>
+
+          <span class="shrink-0 rounded-full bg-white p-1.5 text-gray-900 sm:p-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-45" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd"></path>
+            </svg>
+          </span>
+        </summary>
+
+        <p class="mt-4 leading-relaxed text-gray-700 text-xl">
+          ברור! תוכלו לבקש שינויים כדי שתהיו מרוצים ב 100%! אבל לידיעתכם זה
+          ישפיע על זמן קבלת התוצר!
+        </p>
+      </details>
+    </div>
+  </div>
+</article>
+  
+</div><style data-typed-fadeout-js-css="true">
+        .typed-fade-out{
+          opacity: 0;
+          transition: opacity .25s;
+        }
+        .typed-cursor.typed-cursor--blink.typed-fade-out{
+          -webkit-animation: 0;
+          animation: 0;
+        }
+      </style>
+
+    <astro-particles data-id="tsparticles" data-options="{&quot;autoPlay&quot;:true,&quot;background&quot;:{&quot;color&quot;:{&quot;value&quot;:&quot;#ffff&quot;},&quot;image&quot;:&quot;&quot;,&quot;position&quot;:&quot;&quot;,&quot;repeat&quot;:&quot;&quot;,&quot;size&quot;:&quot;&quot;,&quot;opacity&quot;:1},&quot;backgroundMask&quot;:{&quot;composite&quot;:&quot;destination-out&quot;,&quot;cover&quot;:{&quot;color&quot;:{&quot;value&quot;:&quot;#fff&quot;},&quot;opacity&quot;:1},&quot;enable&quot;:false},&quot;defaultThemes&quot;:{},&quot;delay&quot;:0,&quot;fullScreen&quot;:{&quot;enable&quot;:true,&quot;zIndex&quot;:-1},&quot;detectRetina&quot;:true,&quot;duration&quot;:0,&quot;fpsLimit&quot;:120,&quot;interactivity&quot;:{&quot;detectsOn&quot;:&quot;window&quot;,&quot;events&quot;:{&quot;onClick&quot;:{&quot;enable&quot;:false,&quot;mode&quot;:[]},&quot;onDiv&quot;:{&quot;selectors&quot;:[],&quot;enable&quot;:false,&quot;mode&quot;:[],&quot;type&quot;:&quot;circle&quot;},&quot;onHover&quot;:{&quot;enable&quot;:false,&quot;mode&quot;:[],&quot;parallax&quot;:{&quot;enable&quot;:false,&quot;force&quot;:2,&quot;smooth&quot;:10}},&quot;resize&quot;:{&quot;delay&quot;:0.5,&quot;enable&quot;:true}},&quot;modes&quot;:{&quot;trail&quot;:{&quot;delay&quot;:1,&quot;pauseOnStop&quot;:false,&quot;quantity&quot;:1},&quot;attract&quot;:{&quot;distance&quot;:200,&quot;duration&quot;:0.4,&quot;easing&quot;:&quot;ease-out-quad&quot;,&quot;factor&quot;:1,&quot;maxSpeed&quot;:50,&quot;speed&quot;:1},&quot;bounce&quot;:{&quot;distance&quot;:200},&quot;bubble&quot;:{&quot;distance&quot;:200,&quot;duration&quot;:0.4,&quot;mix&quot;:false,&quot;divs&quot;:{&quot;distance&quot;:200,&quot;duration&quot;:0.4,&quot;mix&quot;:false,&quot;selectors&quot;:[]}},&quot;connect&quot;:{&quot;distance&quot;:80,&quot;links&quot;:{&quot;opacity&quot;:0.5},&quot;radius&quot;:60},&quot;grab&quot;:{&quot;distance&quot;:100,&quot;links&quot;:{&quot;blink&quot;:false,&quot;consent&quot;:false,&quot;opacity&quot;:1}},&quot;push&quot;:{&quot;default&quot;:true,&quot;groups&quot;:[],&quot;quantity&quot;:4},&quot;remove&quot;:{&quot;quantity&quot;:2},&quot;repulse&quot;:{&quot;distance&quot;:200,&quot;duration&quot;:0.4,&quot;factor&quot;:100,&quot;speed&quot;:1,&quot;maxSpeed&quot;:50,&quot;easing&quot;:&quot;ease-out-quad&quot;,&quot;divs&quot;:{&quot;distance&quot;:200,&quot;duration&quot;:0.4,&quot;factor&quot;:100,&quot;speed&quot;:1,&quot;maxSpeed&quot;:50,&quot;easing&quot;:&quot;ease-out-quad&quot;,&quot;selectors&quot;:[]}},&quot;slow&quot;:{&quot;factor&quot;:3,&quot;radius&quot;:200},&quot;light&quot;:{&quot;area&quot;:{&quot;gradient&quot;:{&quot;start&quot;:{&quot;value&quot;:&quot;#ffffff&quot;},&quot;stop&quot;:{&quot;value&quot;:&quot;#000000&quot;}},&quot;radius&quot;:1000},&quot;shadow&quot;:{&quot;color&quot;:{&quot;value&quot;:&quot;#000000&quot;},&quot;length&quot;:2000}}}},&quot;manualParticles&quot;:[],&quot;particles&quot;:{&quot;bounce&quot;:{&quot;horizontal&quot;:{&quot;random&quot;:{&quot;enable&quot;:false,&quot;minimumValue&quot;:0.1},&quot;value&quot;:1},&quot;vertical&quot;:{&quot;random&quot;:{&quot;enable&quot;:false,&quot;minimumValue&quot;:0.1},&quot;value&quot;:1}},&quot;collisions&quot;:{&quot;absorb&quot;:{&quot;speed&quot;:2},&quot;bounce&quot;:{&quot;horizontal&quot;:{&quot;random&quot;:{&quot;enable&quot;:false,&quot;minimumValue&quot;:0.1},&quot;value&quot;:1},&quot;vertical&quot;:{&quot;random&quot;:{&quot;enable&quot;:false,&quot;minimumValue&quot;:0.1},&quot;value&quot;:1}},&quot;enable&quot;:false,&quot;maxSpeed&quot;:50,&quot;mode&quot;:&quot;bounce&quot;,&quot;overlap&quot;:{&quot;enable&quot;:true,&quot;retries&quot;:0}},&quot;color&quot;:{&quot;value&quot;:&quot;#e3dede&quot;,&quot;animation&quot;:{&quot;h&quot;:{&quot;count&quot;:0,&quot;enable&quot;:false,&quot;offset&quot;:0,&quot;speed&quot;:20,&quot;delay&quot;:0,&quot;decay&quot;:0,&quot;sync&quot;:true},&quot;s&quot;:{&quot;count&quot;:0,&quot;enable&quot;:false,&quot;offset&quot;:0,&quot;speed&quot;:1,&quot;delay&quot;:0,&quot;decay&quot;:0,&quot;sync&quot;:true},&quot;l&quot;:{&quot;count&quot;:0,&quot;enable&quot;:false,&quot;offset&quot;:0,&quot;speed&quot;:1,&quot;delay&quot;:0,&quot;decay&quot;:0,&quot;sync&quot;:true}}},&quot;groups&quot;:{&quot;z5000&quot;:{&quot;number&quot;:{&quot;value&quot;:70},&quot;zIndex&quot;:{&quot;value&quot;:50}},&quot;z7500&quot;:{&quot;number&quot;:{&quot;value&quot;:30},&quot;zIndex&quot;:{&quot;value&quot;:75}},&quot;z2500&quot;:{&quot;number&quot;:{&quot;value&quot;:50},&quot;zIndex&quot;:{&quot;value&quot;:25}},&quot;z1000&quot;:{&quot;number&quot;:{&quot;value&quot;:40},&quot;zIndex&quot;:{&quot;value&quot;:10}}},&quot;move&quot;:{&quot;angle&quot;:{&quot;offset&quot;:0,&quot;value&quot;:10},&quot;attract&quot;:{&quot;distance&quot;:200,&quot;enable&quot;:false,&quot;rotate&quot;:{&quot;x&quot;:600,&quot;y&quot;:1200}},&quot;center&quot;:{&quot;x&quot;:50,&quot;y&quot;:50,&quot;mode&quot;:&quot;percent&quot;,&quot;radius&quot;:0},&quot;decay&quot;:0,&quot;distance&quot;:{},&quot;direction&quot;:&quot;right&quot;,&quot;drift&quot;:0,&quot;enable&quot;:true,&quot;gravity&quot;:{&quot;acceleration&quot;:9.81,&quot;enable&quot;:false,&quot;inverse&quot;:false,&quot;maxSpeed&quot;:50},&quot;path&quot;:{&quot;clamp&quot;:true,&quot;delay&quot;:{&quot;random&quot;:{&quot;enable&quot;:false,&quot;minimumValue&quot;:0},&quot;value&quot;:0},&quot;enable&quot;:false,&quot;options&quot;:{}},&quot;outModes&quot;:{&quot;default&quot;:&quot;out&quot;,&quot;bottom&quot;:&quot;out&quot;,&quot;left&quot;:&quot;out&quot;,&quot;right&quot;:&quot;out&quot;,&quot;top&quot;:&quot;out&quot;},&quot;random&quot;:false,&quot;size&quot;:false,&quot;speed&quot;:5,&quot;spin&quot;:{&quot;acceleration&quot;:0,&quot;enable&quot;:false},&quot;straight&quot;:false,&quot;trail&quot;:{&quot;enable&quot;:false,&quot;length&quot;:10,&quot;fill&quot;:{}},&quot;vibrate&quot;:false,&quot;warp&quot;:false},&quot;number&quot;:{&quot;density&quot;:{&quot;enable&quot;:false,&quot;width&quot;:1920,&quot;height&quot;:1080},&quot;limit&quot;:0,&quot;value&quot;:200},&quot;opacity&quot;:{&quot;random&quot;:{&quot;enable&quot;:false,&quot;minimumValue&quot;:0.1},&quot;value&quot;:1,&quot;animation&quot;:{&quot;count&quot;:0,&quot;enable&quot;:false,&quot;speed&quot;:3,&quot;decay&quot;:0,&quot;delay&quot;:0,&quot;sync&quot;:false,&quot;mode&quot;:&quot;auto&quot;,&quot;startValue&quot;:&quot;random&quot;,&quot;destroy&quot;:&quot;none&quot;,&quot;minimumValue&quot;:0.1}},&quot;reduceDuplicates&quot;:false,&quot;shadow&quot;:{&quot;blur&quot;:0,&quot;color&quot;:{&quot;value&quot;:&quot;#000&quot;},&quot;enable&quot;:false,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0}},&quot;shape&quot;:{&quot;close&quot;:true,&quot;fill&quot;:true,&quot;options&quot;:{},&quot;type&quot;:&quot;circle&quot;},&quot;size&quot;:{&quot;random&quot;:{&quot;enable&quot;:false,&quot;minimumValue&quot;:1},&quot;value&quot;:3,&quot;animation&quot;:{&quot;count&quot;:0,&quot;enable&quot;:false,&quot;speed&quot;:5,&quot;decay&quot;:0,&quot;delay&quot;:0,&quot;sync&quot;:false,&quot;mode&quot;:&quot;auto&quot;,&quot;startValue&quot;:&quot;random&quot;,&quot;destroy&quot;:&quot;none&quot;}},&quot;stroke&quot;:{&quot;width&quot;:0},&quot;zIndex&quot;:{&quot;random&quot;:{&quot;enable&quot;:false,&quot;minimumValue&quot;:0},&quot;value&quot;:5,&quot;opacityRate&quot;:0.5,&quot;sizeRate&quot;:1,&quot;velocityRate&quot;:1},&quot;destroy&quot;:{&quot;bounds&quot;:{},&quot;mode&quot;:&quot;none&quot;,&quot;split&quot;:{&quot;count&quot;:1,&quot;factor&quot;:{&quot;random&quot;:{&quot;enable&quot;:false,&quot;minimumValue&quot;:0},&quot;value&quot;:3},&quot;rate&quot;:{&quot;random&quot;:{&quot;enable&quot;:false,&quot;minimumValue&quot;:0},&quot;value&quot;:{&quot;min&quot;:4,&quot;max&quot;:9}},&quot;sizeOffset&quot;:true,&quot;particles&quot;:{}}},&quot;roll&quot;:{&quot;darken&quot;:{&quot;enable&quot;:false,&quot;value&quot;:0},&quot;enable&quot;:false,&quot;enlighten&quot;:{&quot;enable&quot;:false,&quot;value&quot;:0},&quot;mode&quot;:&quot;vertical&quot;,&quot;speed&quot;:25},&quot;tilt&quot;:{&quot;random&quot;:{&quot;enable&quot;:false,&quot;minimumValue&quot;:0},&quot;value&quot;:0,&quot;animation&quot;:{&quot;enable&quot;:false,&quot;speed&quot;:0,&quot;decay&quot;:0,&quot;sync&quot;:false},&quot;direction&quot;:&quot;clockwise&quot;,&quot;enable&quot;:false},&quot;twinkle&quot;:{&quot;lines&quot;:{&quot;enable&quot;:false,&quot;frequency&quot;:0.05,&quot;opacity&quot;:1},&quot;particles&quot;:{&quot;enable&quot;:false,&quot;frequency&quot;:0.05,&quot;opacity&quot;:1}},&quot;wobble&quot;:{&quot;distance&quot;:5,&quot;enable&quot;:false,&quot;speed&quot;:{&quot;angle&quot;:50,&quot;move&quot;:10}},&quot;life&quot;:{&quot;count&quot;:0,&quot;delay&quot;:{&quot;random&quot;:{&quot;enable&quot;:false,&quot;minimumValue&quot;:0},&quot;value&quot;:0,&quot;sync&quot;:false},&quot;duration&quot;:{&quot;random&quot;:{&quot;enable&quot;:false,&quot;minimumValue&quot;:0.0001},&quot;value&quot;:0,&quot;sync&quot;:false}},&quot;rotate&quot;:{&quot;random&quot;:{&quot;enable&quot;:false,&quot;minimumValue&quot;:0},&quot;value&quot;:0,&quot;animation&quot;:{&quot;enable&quot;:false,&quot;speed&quot;:0,&quot;decay&quot;:0,&quot;sync&quot;:false},&quot;direction&quot;:&quot;clockwise&quot;,&quot;path&quot;:false},&quot;orbit&quot;:{&quot;animation&quot;:{&quot;count&quot;:0,&quot;enable&quot;:false,&quot;speed&quot;:1,&quot;decay&quot;:0,&quot;delay&quot;:0,&quot;sync&quot;:false},&quot;enable&quot;:false,&quot;opacity&quot;:1,&quot;rotation&quot;:{&quot;random&quot;:{&quot;enable&quot;:false,&quot;minimumValue&quot;:0},&quot;value&quot;:45},&quot;width&quot;:1},&quot;links&quot;:{&quot;blink&quot;:false,&quot;color&quot;:{&quot;value&quot;:&quot;#ffffff&quot;},&quot;consent&quot;:false,&quot;distance&quot;:100,&quot;enable&quot;:false,&quot;frequency&quot;:1,&quot;opacity&quot;:0.4,&quot;shadow&quot;:{&quot;blur&quot;:5,&quot;color&quot;:{&quot;value&quot;:&quot;#000&quot;},&quot;enable&quot;:false},&quot;triangles&quot;:{&quot;enable&quot;:false,&quot;frequency&quot;:1},&quot;width&quot;:1,&quot;warp&quot;:false},&quot;repulse&quot;:{&quot;random&quot;:{&quot;enable&quot;:false,&quot;minimumValue&quot;:0},&quot;value&quot;:0,&quot;enabled&quot;:false,&quot;distance&quot;:1,&quot;duration&quot;:1,&quot;factor&quot;:1,&quot;speed&quot;:1}},&quot;pauseOnBlur&quot;:true,&quot;pauseOnOutsideViewport&quot;:true,&quot;responsive&quot;:[],&quot;smooth&quot;:false,&quot;style&quot;:{},&quot;themes&quot;:[],&quot;zLayers&quot;:100,&quot;emitters&quot;:{&quot;autoPlay&quot;:true,&quot;fill&quot;:true,&quot;life&quot;:{&quot;wait&quot;:false},&quot;rate&quot;:{&quot;quantity&quot;:1,&quot;delay&quot;:20},&quot;shape&quot;:&quot;square&quot;,&quot;startCount&quot;:0,&quot;size&quot;:{&quot;mode&quot;:&quot;percent&quot;,&quot;height&quot;:-90,&quot;width&quot;:0},&quot;particles&quot;:{&quot;shape&quot;:{&quot;type&quot;:&quot;images&quot;},&quot;size&quot;:{&quot;value&quot;:40},&quot;move&quot;:{&quot;speed&quot;:10,&quot;outModes&quot;:{&quot;default&quot;:&quot;none&quot;,&quot;right&quot;:&quot;destroy&quot;},&quot;straight&quot;:true},&quot;zIndex&quot;:{&quot;value&quot;:0},&quot;rotate&quot;:{&quot;value&quot;:{&quot;min&quot;:0,&quot;max&quot;:360},&quot;animation&quot;:{&quot;enable&quot;:true,&quot;speed&quot;:10,&quot;sync&quot;:true}}},&quot;position&quot;:{&quot;x&quot;:-5,&quot;y&quot;:55}},&quot;motion&quot;:{&quot;disable&quot;:false,&quot;reduce&quot;:{&quot;factor&quot;:4,&quot;value&quot;:true}}}" data-init="particlesInit">
+    <canvas></canvas>
+</astro-particles>
+    <footer class="my-20">
+  <p class="text-center text-sm text-slate-500">
+    Copyright © 2023 NickML. All rights reserved.
+  </p>
+  <!--
+    Can we ask you a favor 🙏
+    Please keep this backlink on your website if possible.
+    or Purchase a commercial license from https://web3templates.com
+  -->
+  <p class="text-center text-xs text-slate-500 mt-1">
+    Made by <a href="https://www.strikedev.me/" target="_blank" rel="noopener" class="hover:underline">
+      Strike
+    </a>
+  </p>
+</footer>
+    
+  
+<div id="tsparticles"><canvas data-generated="true" style="width: 100% !important; height: 100% !important; position: fixed !important; z-index: -1 !important; top: 0px !important; left: 0px !important; background-color: rgb(255, 255, 255); pointer-events: none;" aria-hidden="true" width="1903" height="945"></canvas></div></body></html>
